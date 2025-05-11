@@ -216,6 +216,7 @@
             // 
             this.resultTextBox.Location = new System.Drawing.Point(83, 434);
             this.resultTextBox.Name = "resultTextBox";
+            this.resultTextBox.ReadOnly = true;
             this.resultTextBox.Size = new System.Drawing.Size(609, 180);
             this.resultTextBox.TabIndex = 21;
             this.resultTextBox.Text = "";
