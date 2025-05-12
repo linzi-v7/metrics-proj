@@ -33,31 +33,71 @@
             this.extInquiry_Label = new System.Windows.Forms.Label();
             this.intLogicFiles_Label = new System.Windows.Forms.Label();
             this.extInterfaceFiles_Label = new System.Windows.Forms.Label();
-            this.count_Label = new System.Windows.Forms.Label();
-            this.extInput_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.extOutput_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.extInquiry_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.intLogicFiles_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.extInterfaceFiles_Numeric = new System.Windows.Forms.NumericUpDown();
-            this.extInput_ComboBox = new System.Windows.Forms.ComboBox();
-            this.type_Label = new System.Windows.Forms.Label();
-            this.extOutput_ComboBox = new System.Windows.Forms.ComboBox();
-            this.extInquiry_ComboBox = new System.Windows.Forms.ComboBox();
-            this.intLogicFiles_ComboBox = new System.Windows.Forms.ComboBox();
-            this.extInterfaceFiles_ComboBox = new System.Windows.Forms.ComboBox();
+            this.nudExtInputSimple = new System.Windows.Forms.NumericUpDown();
             this.resultTextBox = new System.Windows.Forms.RichTextBox();
             this.calculateUFP_Button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.extInput_Numeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extOutput_Numeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extInquiry_Numeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intLogicFiles_Numeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extInterfaceFiles_Numeric)).BeginInit();
+            this.simpleLabel = new System.Windows.Forms.Label();
+            this.countGroupBox = new System.Windows.Forms.GroupBox();
+            this.nudExtInputAverage = new System.Windows.Forms.NumericUpDown();
+            this.nudExtInputComplex = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.extInput_GroupBox = new System.Windows.Forms.GroupBox();
+            this.extOutput_GroupBox = new System.Windows.Forms.GroupBox();
+            this.nudExtOutputSimple = new System.Windows.Forms.NumericUpDown();
+            this.nudExtOutputComplex = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudExtOutputAverage = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.extInquiry_GroupBox = new System.Windows.Forms.GroupBox();
+            this.nudExtInquirySimple = new System.Windows.Forms.NumericUpDown();
+            this.nudExtInquiryComplex = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nudExtInquiryAverage = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.intLogicFiles_GroupBox = new System.Windows.Forms.GroupBox();
+            this.nudIntLogicSimple = new System.Windows.Forms.NumericUpDown();
+            this.nudIntLogicComplex = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudIntLogicAverage = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.extInterfaceFiles_GroupBox = new System.Windows.Forms.GroupBox();
+            this.nudExtInterfaceSimple = new System.Windows.Forms.NumericUpDown();
+            this.nudExtInterfaceComplex = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nudExtInterfaceAverage = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputSimple)).BeginInit();
+            this.countGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputAverage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputComplex)).BeginInit();
+            this.extInput_GroupBox.SuspendLayout();
+            this.extOutput_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputComplex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputAverage)).BeginInit();
+            this.extInquiry_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquirySimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquiryComplex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquiryAverage)).BeginInit();
+            this.intLogicFiles_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicComplex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicAverage)).BeginInit();
+            this.extInterfaceFiles_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceComplex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceAverage)).BeginInit();
             this.SuspendLayout();
             // 
             // extInput_Label
             // 
             this.extInput_Label.AutoSize = true;
-            this.extInput_Label.Location = new System.Drawing.Point(67, 70);
+            this.extInput_Label.Location = new System.Drawing.Point(67, 89);
             this.extInput_Label.Name = "extInput_Label";
             this.extInput_Label.Size = new System.Drawing.Size(86, 16);
             this.extInput_Label.TabIndex = 0;
@@ -66,7 +106,7 @@
             // extOutput_Label
             // 
             this.extOutput_Label.AutoSize = true;
-            this.extOutput_Label.Location = new System.Drawing.Point(68, 116);
+            this.extOutput_Label.Location = new System.Drawing.Point(67, 161);
             this.extOutput_Label.Name = "extOutput_Label";
             this.extOutput_Label.Size = new System.Drawing.Size(96, 16);
             this.extOutput_Label.TabIndex = 1;
@@ -75,7 +115,7 @@
             // extInquiry_Label
             // 
             this.extInquiry_Label.AutoSize = true;
-            this.extInquiry_Label.Location = new System.Drawing.Point(67, 166);
+            this.extInquiry_Label.Location = new System.Drawing.Point(67, 231);
             this.extInquiry_Label.Name = "extInquiry_Label";
             this.extInquiry_Label.Size = new System.Drawing.Size(97, 16);
             this.extInquiry_Label.TabIndex = 2;
@@ -84,7 +124,7 @@
             // intLogicFiles_Label
             // 
             this.intLogicFiles_Label.AutoSize = true;
-            this.intLogicFiles_Label.Location = new System.Drawing.Point(67, 206);
+            this.intLogicFiles_Label.Location = new System.Drawing.Point(67, 303);
             this.intLogicFiles_Label.Name = "intLogicFiles_Label";
             this.intLogicFiles_Label.Size = new System.Drawing.Size(129, 16);
             this.intLogicFiles_Label.TabIndex = 3;
@@ -93,128 +133,22 @@
             // extInterfaceFiles_Label
             // 
             this.extInterfaceFiles_Label.AutoSize = true;
-            this.extInterfaceFiles_Label.Location = new System.Drawing.Point(67, 255);
+            this.extInterfaceFiles_Label.Location = new System.Drawing.Point(67, 384);
             this.extInterfaceFiles_Label.Name = "extInterfaceFiles_Label";
             this.extInterfaceFiles_Label.Size = new System.Drawing.Size(136, 16);
             this.extInterfaceFiles_Label.TabIndex = 4;
             this.extInterfaceFiles_Label.Text = "External Interface files";
             // 
-            // count_Label
+            // nudExtInputSimple
             // 
-            this.count_Label.AutoSize = true;
-            this.count_Label.Location = new System.Drawing.Point(368, 26);
-            this.count_Label.Name = "count_Label";
-            this.count_Label.Size = new System.Drawing.Size(41, 16);
-            this.count_Label.TabIndex = 5;
-            this.count_Label.Text = "Count";
-            // 
-            // extInput_Numeric
-            // 
-            this.extInput_Numeric.Location = new System.Drawing.Point(329, 70);
-            this.extInput_Numeric.Name = "extInput_Numeric";
-            this.extInput_Numeric.Size = new System.Drawing.Size(120, 22);
-            this.extInput_Numeric.TabIndex = 6;
-            // 
-            // extOutput_Numeric
-            // 
-            this.extOutput_Numeric.Location = new System.Drawing.Point(329, 116);
-            this.extOutput_Numeric.Name = "extOutput_Numeric";
-            this.extOutput_Numeric.Size = new System.Drawing.Size(120, 22);
-            this.extOutput_Numeric.TabIndex = 7;
-            // 
-            // extInquiry_Numeric
-            // 
-            this.extInquiry_Numeric.Location = new System.Drawing.Point(329, 166);
-            this.extInquiry_Numeric.Name = "extInquiry_Numeric";
-            this.extInquiry_Numeric.Size = new System.Drawing.Size(120, 22);
-            this.extInquiry_Numeric.TabIndex = 8;
-            // 
-            // intLogicFiles_Numeric
-            // 
-            this.intLogicFiles_Numeric.Location = new System.Drawing.Point(329, 206);
-            this.intLogicFiles_Numeric.Name = "intLogicFiles_Numeric";
-            this.intLogicFiles_Numeric.Size = new System.Drawing.Size(120, 22);
-            this.intLogicFiles_Numeric.TabIndex = 9;
-            // 
-            // extInterfaceFiles_Numeric
-            // 
-            this.extInterfaceFiles_Numeric.Location = new System.Drawing.Point(329, 249);
-            this.extInterfaceFiles_Numeric.Name = "extInterfaceFiles_Numeric";
-            this.extInterfaceFiles_Numeric.Size = new System.Drawing.Size(120, 22);
-            this.extInterfaceFiles_Numeric.TabIndex = 10;
-            // 
-            // extInput_ComboBox
-            // 
-            this.extInput_ComboBox.FormattingEnabled = true;
-            this.extInput_ComboBox.Items.AddRange(new object[] {
-            "Simple",
-            "Average",
-            "Complex"});
-            this.extInput_ComboBox.Location = new System.Drawing.Point(542, 70);
-            this.extInput_ComboBox.Name = "extInput_ComboBox";
-            this.extInput_ComboBox.Size = new System.Drawing.Size(121, 24);
-            this.extInput_ComboBox.TabIndex = 11;
-            // 
-            // type_Label
-            // 
-            this.type_Label.AutoSize = true;
-            this.type_Label.Location = new System.Drawing.Point(585, 26);
-            this.type_Label.Name = "type_Label";
-            this.type_Label.Size = new System.Drawing.Size(39, 16);
-            this.type_Label.TabIndex = 16;
-            this.type_Label.Text = "Type";
-            // 
-            // extOutput_ComboBox
-            // 
-            this.extOutput_ComboBox.FormattingEnabled = true;
-            this.extOutput_ComboBox.Items.AddRange(new object[] {
-            "Simple",
-            "Average",
-            "Complex"});
-            this.extOutput_ComboBox.Location = new System.Drawing.Point(542, 116);
-            this.extOutput_ComboBox.Name = "extOutput_ComboBox";
-            this.extOutput_ComboBox.Size = new System.Drawing.Size(121, 24);
-            this.extOutput_ComboBox.TabIndex = 17;
-            // 
-            // extInquiry_ComboBox
-            // 
-            this.extInquiry_ComboBox.FormattingEnabled = true;
-            this.extInquiry_ComboBox.Items.AddRange(new object[] {
-            "Simple",
-            "Average",
-            "Complex"});
-            this.extInquiry_ComboBox.Location = new System.Drawing.Point(542, 166);
-            this.extInquiry_ComboBox.Name = "extInquiry_ComboBox";
-            this.extInquiry_ComboBox.Size = new System.Drawing.Size(121, 24);
-            this.extInquiry_ComboBox.TabIndex = 18;
-            // 
-            // intLogicFiles_ComboBox
-            // 
-            this.intLogicFiles_ComboBox.FormattingEnabled = true;
-            this.intLogicFiles_ComboBox.Items.AddRange(new object[] {
-            "Simple",
-            "Average",
-            "Complex"});
-            this.intLogicFiles_ComboBox.Location = new System.Drawing.Point(542, 206);
-            this.intLogicFiles_ComboBox.Name = "intLogicFiles_ComboBox";
-            this.intLogicFiles_ComboBox.Size = new System.Drawing.Size(121, 24);
-            this.intLogicFiles_ComboBox.TabIndex = 19;
-            // 
-            // extInterfaceFiles_ComboBox
-            // 
-            this.extInterfaceFiles_ComboBox.FormattingEnabled = true;
-            this.extInterfaceFiles_ComboBox.Items.AddRange(new object[] {
-            "Simple",
-            "Average",
-            "Complex"});
-            this.extInterfaceFiles_ComboBox.Location = new System.Drawing.Point(542, 249);
-            this.extInterfaceFiles_ComboBox.Name = "extInterfaceFiles_ComboBox";
-            this.extInterfaceFiles_ComboBox.Size = new System.Drawing.Size(121, 24);
-            this.extInterfaceFiles_ComboBox.TabIndex = 20;
+            this.nudExtInputSimple.Location = new System.Drawing.Point(16, 30);
+            this.nudExtInputSimple.Name = "nudExtInputSimple";
+            this.nudExtInputSimple.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInputSimple.TabIndex = 6;
             // 
             // resultTextBox
             // 
-            this.resultTextBox.Location = new System.Drawing.Point(83, 434);
+            this.resultTextBox.Location = new System.Drawing.Point(233, 532);
             this.resultTextBox.Name = "resultTextBox";
             this.resultTextBox.ReadOnly = true;
             this.resultTextBox.Size = new System.Drawing.Size(609, 180);
@@ -223,33 +157,344 @@
             // 
             // calculateUFP_Button
             // 
-            this.calculateUFP_Button.Location = new System.Drawing.Point(71, 327);
+            this.calculateUFP_Button.Location = new System.Drawing.Point(63, 454);
             this.calculateUFP_Button.Name = "calculateUFP_Button";
-            this.calculateUFP_Button.Size = new System.Drawing.Size(125, 44);
+            this.calculateUFP_Button.Size = new System.Drawing.Size(163, 55);
             this.calculateUFP_Button.TabIndex = 22;
             this.calculateUFP_Button.Text = "Calculate UFP";
             this.calculateUFP_Button.UseVisualStyleBackColor = true;
             this.calculateUFP_Button.Click += new System.EventHandler(this.calculateUFP_Button_Click);
             // 
+            // simpleLabel
+            // 
+            this.simpleLabel.AutoSize = true;
+            this.simpleLabel.Location = new System.Drawing.Point(155, 32);
+            this.simpleLabel.Name = "simpleLabel";
+            this.simpleLabel.Size = new System.Drawing.Size(49, 16);
+            this.simpleLabel.TabIndex = 23;
+            this.simpleLabel.Text = "Simple";
+            // 
+            // countGroupBox
+            // 
+            this.countGroupBox.Controls.Add(this.extInterfaceFiles_GroupBox);
+            this.countGroupBox.Controls.Add(this.extOutput_GroupBox);
+            this.countGroupBox.Controls.Add(this.intLogicFiles_GroupBox);
+            this.countGroupBox.Controls.Add(this.extInquiry_GroupBox);
+            this.countGroupBox.Controls.Add(this.extInput_GroupBox);
+            this.countGroupBox.Location = new System.Drawing.Point(227, 36);
+            this.countGroupBox.Name = "countGroupBox";
+            this.countGroupBox.Size = new System.Drawing.Size(777, 392);
+            this.countGroupBox.TabIndex = 28;
+            this.countGroupBox.TabStop = false;
+            this.countGroupBox.Text = "Counts";
+            // 
+            // nudExtInputAverage
+            // 
+            this.nudExtInputAverage.Location = new System.Drawing.Point(307, 34);
+            this.nudExtInputAverage.Name = "nudExtInputAverage";
+            this.nudExtInputAverage.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInputAverage.TabIndex = 28;
+            // 
+            // nudExtInputComplex
+            // 
+            this.nudExtInputComplex.Location = new System.Drawing.Point(552, 30);
+            this.nudExtInputComplex.Name = "nudExtInputComplex";
+            this.nudExtInputComplex.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInputComplex.TabIndex = 33;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(455, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Average";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(694, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 16);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Complex";
+            // 
+            // extInput_GroupBox
+            // 
+            this.extInput_GroupBox.Controls.Add(this.nudExtInputSimple);
+            this.extInput_GroupBox.Controls.Add(this.nudExtInputComplex);
+            this.extInput_GroupBox.Controls.Add(this.simpleLabel);
+            this.extInput_GroupBox.Controls.Add(this.label5);
+            this.extInput_GroupBox.Controls.Add(this.nudExtInputAverage);
+            this.extInput_GroupBox.Controls.Add(this.label10);
+            this.extInput_GroupBox.Location = new System.Drawing.Point(6, 21);
+            this.extInput_GroupBox.Name = "extInput_GroupBox";
+            this.extInput_GroupBox.Size = new System.Drawing.Size(765, 68);
+            this.extInput_GroupBox.TabIndex = 29;
+            this.extInput_GroupBox.TabStop = false;
+            this.extInput_GroupBox.Text = "External Input";
+            // 
+            // extOutput_GroupBox
+            // 
+            this.extOutput_GroupBox.Controls.Add(this.nudExtOutputSimple);
+            this.extOutput_GroupBox.Controls.Add(this.nudExtOutputComplex);
+            this.extOutput_GroupBox.Controls.Add(this.label1);
+            this.extOutput_GroupBox.Controls.Add(this.label2);
+            this.extOutput_GroupBox.Controls.Add(this.nudExtOutputAverage);
+            this.extOutput_GroupBox.Controls.Add(this.label3);
+            this.extOutput_GroupBox.Location = new System.Drawing.Point(0, 95);
+            this.extOutput_GroupBox.Name = "extOutput_GroupBox";
+            this.extOutput_GroupBox.Size = new System.Drawing.Size(771, 68);
+            this.extOutput_GroupBox.TabIndex = 44;
+            this.extOutput_GroupBox.TabStop = false;
+            this.extOutput_GroupBox.Text = "External Output";
+            // 
+            // nudExtOutputSimple
+            // 
+            this.nudExtOutputSimple.Location = new System.Drawing.Point(16, 30);
+            this.nudExtOutputSimple.Name = "nudExtOutputSimple";
+            this.nudExtOutputSimple.Size = new System.Drawing.Size(120, 22);
+            this.nudExtOutputSimple.TabIndex = 6;
+            // 
+            // nudExtOutputComplex
+            // 
+            this.nudExtOutputComplex.Location = new System.Drawing.Point(552, 30);
+            this.nudExtOutputComplex.Name = "nudExtOutputComplex";
+            this.nudExtOutputComplex.Size = new System.Drawing.Size(120, 22);
+            this.nudExtOutputComplex.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(155, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Simple";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(455, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Average";
+            // 
+            // nudExtOutputAverage
+            // 
+            this.nudExtOutputAverage.Location = new System.Drawing.Point(307, 34);
+            this.nudExtOutputAverage.Name = "nudExtOutputAverage";
+            this.nudExtOutputAverage.Size = new System.Drawing.Size(120, 22);
+            this.nudExtOutputAverage.TabIndex = 28;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(694, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Complex";
+            // 
+            // extInquiry_GroupBox
+            // 
+            this.extInquiry_GroupBox.Controls.Add(this.nudExtInquirySimple);
+            this.extInquiry_GroupBox.Controls.Add(this.nudExtInquiryComplex);
+            this.extInquiry_GroupBox.Controls.Add(this.label4);
+            this.extInquiry_GroupBox.Controls.Add(this.label6);
+            this.extInquiry_GroupBox.Controls.Add(this.nudExtInquiryAverage);
+            this.extInquiry_GroupBox.Controls.Add(this.label7);
+            this.extInquiry_GroupBox.Location = new System.Drawing.Point(6, 163);
+            this.extInquiry_GroupBox.Name = "extInquiry_GroupBox";
+            this.extInquiry_GroupBox.Size = new System.Drawing.Size(765, 68);
+            this.extInquiry_GroupBox.TabIndex = 44;
+            this.extInquiry_GroupBox.TabStop = false;
+            this.extInquiry_GroupBox.Text = "External Inquiry";
+            // 
+            // nudExtInquirySimple
+            // 
+            this.nudExtInquirySimple.Location = new System.Drawing.Point(16, 30);
+            this.nudExtInquirySimple.Name = "nudExtInquirySimple";
+            this.nudExtInquirySimple.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInquirySimple.TabIndex = 6;
+            // 
+            // nudExtInquiryComplex
+            // 
+            this.nudExtInquiryComplex.Location = new System.Drawing.Point(552, 30);
+            this.nudExtInquiryComplex.Name = "nudExtInquiryComplex";
+            this.nudExtInquiryComplex.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInquiryComplex.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Simple";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(455, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Average";
+            // 
+            // nudExtInquiryAverage
+            // 
+            this.nudExtInquiryAverage.Location = new System.Drawing.Point(307, 34);
+            this.nudExtInquiryAverage.Name = "nudExtInquiryAverage";
+            this.nudExtInquiryAverage.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInquiryAverage.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(694, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 16);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Complex";
+            // 
+            // intLogicFiles_GroupBox
+            // 
+            this.intLogicFiles_GroupBox.Controls.Add(this.nudIntLogicSimple);
+            this.intLogicFiles_GroupBox.Controls.Add(this.nudIntLogicComplex);
+            this.intLogicFiles_GroupBox.Controls.Add(this.label8);
+            this.intLogicFiles_GroupBox.Controls.Add(this.label9);
+            this.intLogicFiles_GroupBox.Controls.Add(this.nudIntLogicAverage);
+            this.intLogicFiles_GroupBox.Controls.Add(this.label11);
+            this.intLogicFiles_GroupBox.Location = new System.Drawing.Point(5, 237);
+            this.intLogicFiles_GroupBox.Name = "intLogicFiles_GroupBox";
+            this.intLogicFiles_GroupBox.Size = new System.Drawing.Size(766, 68);
+            this.intLogicFiles_GroupBox.TabIndex = 44;
+            this.intLogicFiles_GroupBox.TabStop = false;
+            this.intLogicFiles_GroupBox.Text = "Internal Logic Files";
+            // 
+            // nudIntLogicSimple
+            // 
+            this.nudIntLogicSimple.Location = new System.Drawing.Point(16, 30);
+            this.nudIntLogicSimple.Name = "nudIntLogicSimple";
+            this.nudIntLogicSimple.Size = new System.Drawing.Size(120, 22);
+            this.nudIntLogicSimple.TabIndex = 6;
+            // 
+            // nudIntLogicComplex
+            // 
+            this.nudIntLogicComplex.Location = new System.Drawing.Point(552, 30);
+            this.nudIntLogicComplex.Name = "nudIntLogicComplex";
+            this.nudIntLogicComplex.Size = new System.Drawing.Size(120, 22);
+            this.nudIntLogicComplex.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(155, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 16);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Simple";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(455, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 16);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Average";
+            // 
+            // nudIntLogicAverage
+            // 
+            this.nudIntLogicAverage.Location = new System.Drawing.Point(307, 34);
+            this.nudIntLogicAverage.Name = "nudIntLogicAverage";
+            this.nudIntLogicAverage.Size = new System.Drawing.Size(120, 22);
+            this.nudIntLogicAverage.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(694, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 16);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Complex";
+            // 
+            // extInterfaceFiles_GroupBox
+            // 
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.nudExtInterfaceSimple);
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.nudExtInterfaceComplex);
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.label12);
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.label13);
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.nudExtInterfaceAverage);
+            this.extInterfaceFiles_GroupBox.Controls.Add(this.label14);
+            this.extInterfaceFiles_GroupBox.Location = new System.Drawing.Point(5, 318);
+            this.extInterfaceFiles_GroupBox.Name = "extInterfaceFiles_GroupBox";
+            this.extInterfaceFiles_GroupBox.Size = new System.Drawing.Size(766, 68);
+            this.extInterfaceFiles_GroupBox.TabIndex = 44;
+            this.extInterfaceFiles_GroupBox.TabStop = false;
+            this.extInterfaceFiles_GroupBox.Text = "External Interface Files";
+            // 
+            // nudExtInterfaceSimple
+            // 
+            this.nudExtInterfaceSimple.Location = new System.Drawing.Point(16, 30);
+            this.nudExtInterfaceSimple.Name = "nudExtInterfaceSimple";
+            this.nudExtInterfaceSimple.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInterfaceSimple.TabIndex = 6;
+            // 
+            // nudExtInterfaceComplex
+            // 
+            this.nudExtInterfaceComplex.Location = new System.Drawing.Point(552, 30);
+            this.nudExtInterfaceComplex.Name = "nudExtInterfaceComplex";
+            this.nudExtInterfaceComplex.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInterfaceComplex.TabIndex = 33;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(155, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 16);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Simple";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(455, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 16);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Average";
+            // 
+            // nudExtInterfaceAverage
+            // 
+            this.nudExtInterfaceAverage.Location = new System.Drawing.Point(307, 34);
+            this.nudExtInterfaceAverage.Name = "nudExtInterfaceAverage";
+            this.nudExtInterfaceAverage.Size = new System.Drawing.Size(120, 22);
+            this.nudExtInterfaceAverage.TabIndex = 28;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(694, 34);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 16);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Complex";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 687);
+            this.ClientSize = new System.Drawing.Size(1035, 744);
+            this.Controls.Add(this.countGroupBox);
             this.Controls.Add(this.calculateUFP_Button);
             this.Controls.Add(this.resultTextBox);
-            this.Controls.Add(this.extInterfaceFiles_ComboBox);
-            this.Controls.Add(this.intLogicFiles_ComboBox);
-            this.Controls.Add(this.extInquiry_ComboBox);
-            this.Controls.Add(this.extOutput_ComboBox);
-            this.Controls.Add(this.type_Label);
-            this.Controls.Add(this.extInput_ComboBox);
-            this.Controls.Add(this.extInterfaceFiles_Numeric);
-            this.Controls.Add(this.intLogicFiles_Numeric);
-            this.Controls.Add(this.extInquiry_Numeric);
-            this.Controls.Add(this.extOutput_Numeric);
-            this.Controls.Add(this.extInput_Numeric);
-            this.Controls.Add(this.count_Label);
             this.Controls.Add(this.extInterfaceFiles_Label);
             this.Controls.Add(this.intLogicFiles_Label);
             this.Controls.Add(this.extInquiry_Label);
@@ -258,11 +503,32 @@
             this.Name = "Form1";
             this.Text = "FP Calculator Assistant";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.extInput_Numeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extOutput_Numeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extInquiry_Numeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intLogicFiles_Numeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extInterfaceFiles_Numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputSimple)).EndInit();
+            this.countGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputAverage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInputComplex)).EndInit();
+            this.extInput_GroupBox.ResumeLayout(false);
+            this.extInput_GroupBox.PerformLayout();
+            this.extOutput_GroupBox.ResumeLayout(false);
+            this.extOutput_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputComplex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtOutputAverage)).EndInit();
+            this.extInquiry_GroupBox.ResumeLayout(false);
+            this.extInquiry_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquirySimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquiryComplex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInquiryAverage)).EndInit();
+            this.intLogicFiles_GroupBox.ResumeLayout(false);
+            this.intLogicFiles_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicComplex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIntLogicAverage)).EndInit();
+            this.extInterfaceFiles_GroupBox.ResumeLayout(false);
+            this.extInterfaceFiles_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceComplex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExtInterfaceAverage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,20 +541,44 @@
         private System.Windows.Forms.Label extInquiry_Label;
         private System.Windows.Forms.Label intLogicFiles_Label;
         private System.Windows.Forms.Label extInterfaceFiles_Label;
-        private System.Windows.Forms.Label count_Label;
-        private System.Windows.Forms.NumericUpDown extInput_Numeric;
-        private System.Windows.Forms.NumericUpDown extOutput_Numeric;
-        private System.Windows.Forms.NumericUpDown extInquiry_Numeric;
-        private System.Windows.Forms.NumericUpDown intLogicFiles_Numeric;
-        private System.Windows.Forms.NumericUpDown extInterfaceFiles_Numeric;
-        private System.Windows.Forms.ComboBox extInput_ComboBox;
-        private System.Windows.Forms.Label type_Label;
-        private System.Windows.Forms.ComboBox extOutput_ComboBox;
-        private System.Windows.Forms.ComboBox extInquiry_ComboBox;
-        private System.Windows.Forms.ComboBox intLogicFiles_ComboBox;
-        private System.Windows.Forms.ComboBox extInterfaceFiles_ComboBox;
+        private System.Windows.Forms.NumericUpDown nudExtInputSimple;
         private System.Windows.Forms.RichTextBox resultTextBox;
         private System.Windows.Forms.Button calculateUFP_Button;
+        private System.Windows.Forms.Label simpleLabel;
+        private System.Windows.Forms.GroupBox countGroupBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown nudExtInputComplex;
+        private System.Windows.Forms.NumericUpDown nudExtInputAverage;
+        private System.Windows.Forms.GroupBox extOutput_GroupBox;
+        private System.Windows.Forms.NumericUpDown nudExtOutputSimple;
+        private System.Windows.Forms.NumericUpDown nudExtOutputComplex;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudExtOutputAverage;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox intLogicFiles_GroupBox;
+        private System.Windows.Forms.GroupBox extInterfaceFiles_GroupBox;
+        private System.Windows.Forms.NumericUpDown nudExtInterfaceSimple;
+        private System.Windows.Forms.NumericUpDown nudExtInterfaceComplex;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown nudExtInterfaceAverage;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown nudIntLogicSimple;
+        private System.Windows.Forms.NumericUpDown nudIntLogicComplex;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown nudIntLogicAverage;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox extInquiry_GroupBox;
+        private System.Windows.Forms.NumericUpDown nudExtInquirySimple;
+        private System.Windows.Forms.NumericUpDown nudExtInquiryComplex;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown nudExtInquiryAverage;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox extInput_GroupBox;
     }
 }
 

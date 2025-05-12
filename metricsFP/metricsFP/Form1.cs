@@ -37,14 +37,22 @@ namespace metricsFP
         //index this using complexity paramter type and level enums to get desired value
         private int[,] complexityTable = new int[5, 3]
         {
-            { 3, 4, 6   },
+            { 3, 4,   6 },
             { 4,  5,  7 },
             { 3,  4,  6 },
             { 7, 10, 15 },
             { 5,  7, 10 },
         };
-        
 
+
+        private Complexity DetermineComplexity(string controlName)
+        {
+            if (controlName.EndsWith("Simple")) return Complexity.Simple;
+            if (controlName.EndsWith("Average")) return Complexity.Average;
+            if (controlName.EndsWith("Complex")) return Complexity.Complex;
+
+            throw new Exception($"Cannot determine complexity type for control: {controlName}");
+        }
 
 
         public Form1()
@@ -54,45 +62,38 @@ namespace metricsFP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Set all combo boxes to first value
-            extInput_ComboBox.SelectedIndex = 0;
-            extOutput_ComboBox.SelectedIndex = 0;
-            extInquiry_ComboBox.SelectedIndex = 0;
-            intLogicFiles_ComboBox.SelectedIndex = 0;
-            extInterfaceFiles_ComboBox.SelectedIndex = 0;
+            //assign each groupbox to its relevant parameter type for
+            //easier processing in other functions.
+            extInput_GroupBox.Tag = Parameter.ExternalInput;
+            extOutput_GroupBox.Tag = Parameter.ExternalOutput;
+            extInquiry_GroupBox.Tag = Parameter.ExternalInquiry;
+            intLogicFiles_GroupBox.Tag = Parameter.InternalLogicalFiles;
+            extInterfaceFiles_GroupBox.Tag = Parameter.ExternalInterfaceFiles;
 
         }
 
         private void calculateUFP_Button_Click(object sender, EventArgs e)
         {
-            //get count of all parameters based on input
-            int extInputCount = (int) extInput_Numeric.Value;
-            int extOutputCount = (int) extOutput_Numeric.Value;
-            int extInquiryCount = (int) extInquiry_Numeric.Value;
-            int intLogicFilesCount = (int) intLogicFiles_Numeric.Value;
-            int extInterfaceFilesCount = (int) extInterfaceFiles_Numeric.Value;
 
-            //get complexity type of all parameters from the combobox
-            int extInputType = extInput_ComboBox.SelectedIndex;
-            int extOutputType = extOutput_ComboBox.SelectedIndex;
-            int extInquiryType = extInquiry_ComboBox.SelectedIndex;
-            int intLogicFilesType = intLogicFiles_ComboBox.SelectedIndex;
-            int extInterfaceFilesType = extInterfaceFiles_ComboBox.SelectedIndex;
+            int totalUFP = 0;
 
-            //index complexity table
-            int extInputComplexity = complexityTable[(int)Parameter.ExternalInput, extInputType];
-            int extOutputComplexity = complexityTable[(int)Parameter.ExternalOutput, extOutputType];
-            int extInquiryComplexity = complexityTable[(int)Parameter.ExternalInquiry, extInquiryType];
-            int intLogicFilesComplexity = complexityTable[(int)Parameter.InternalLogicalFiles, intLogicFilesType];
-            int extInterfaceFilesComplexity = complexityTable[(int)Parameter.ExternalInterfaceFiles, extInterfaceFilesType];
+            //iterate over each groupbox in the master groupbox (countGroupBox)
+            foreach (Control control in countGroupBox.Controls)
+            {
+                if (!(control is GroupBox currentGroupBox)) continue;
 
+                int parameterType = (int)currentGroupBox.Tag;
 
-            int totalUFP =
-             extInputCount * extInputComplexity +
-             extOutputCount * extOutputComplexity +
-             extInquiryCount * extInquiryComplexity +
-             intLogicFilesCount * intLogicFilesComplexity +
-             extInterfaceFilesCount * extInterfaceFilesComplexity;
+                //iterate over every numeric input in the subGroupBox
+                foreach (Control innerControl in currentGroupBox.Controls)
+                {
+                    if (!(innerControl is NumericUpDown numericControl)) continue;
+
+                    Complexity complexityType = DetermineComplexity(numericControl.Name);
+                    int complexityValue = complexityTable[parameterType, (int)complexityType];
+                    totalUFP += (int)numericControl.Value * complexityValue;
+                }
+            }
 
             resultTextBox.Text =
               "Function Point Analysis Result\n" +
