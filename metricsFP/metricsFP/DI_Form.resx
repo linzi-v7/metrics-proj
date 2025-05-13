@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="resultTextBox.Text" xml:space="preserve">
-    <value>Welcome to the FP Calculator Assistant!
-Follow these steps to complete your Function Point calculation:
-
-1. Calculate the Unadjusted Function Points (UFP)
-2. Determine the Degree of Influence (DI) using our dedicated DI form
-3. Compute the Technical Complexity Factor (TCF)
-4. You're now ready to calculate the final Function Points (FP)!</value>
-  </data>
 </root>

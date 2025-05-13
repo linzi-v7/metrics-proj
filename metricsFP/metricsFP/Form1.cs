@@ -44,6 +44,10 @@ namespace metricsFP
             { 5,  7, 10 },
         };
 
+        private int totalDI;
+        private int totalUFP;
+        private double totalTCF;
+        private double totalFP;
 
         private Complexity DetermineComplexity(string controlName)
         {
@@ -52,6 +56,12 @@ namespace metricsFP
             if (controlName.EndsWith("Complex")) return Complexity.Complex;
 
             throw new Exception($"Cannot determine complexity type for control: {controlName}");
+        }
+
+        public void UpdateDILabel(int result)
+        {
+            totalDI = result;
+            DI_Label.Text = $"Current DI: {result}";
         }
 
 
@@ -75,7 +85,7 @@ namespace metricsFP
         private void calculateUFP_Button_Click(object sender, EventArgs e)
         {
 
-            int totalUFP = 0;
+            totalUFP = 0;
 
             //iterate over each groupbox in the master groupbox (countGroupBox)
             foreach (Control control in countGroupBox.Controls)
@@ -99,6 +109,55 @@ namespace metricsFP
               "Function Point Analysis Result\n" +
               "------------------------------\n" +
               $"Total Unadjusted Function Points (UFP): {totalUFP}";
+        }
+
+        private void openDI_Button_Click(object sender, EventArgs e)
+        {
+            DI_Form dI_Form = new DI_Form(this);
+            dI_Form.ShowDialog();
+        }
+
+        private void calculateTCF_Button_Click(object sender, EventArgs e)
+        {
+            if (totalUFP == 0 || totalDI == 0)
+            {
+                resultTextBox.Text =
+                "Function Point Analysis Result\n" +
+                "------------------------------\n" +
+                "ERROR: CANT CALCULATE RESULT.\n" +
+                "TRY CALCULATING UFP & DI FIRST!";
+                return;
+            }
+
+            totalTCF = 0.65 + (0.01 * totalDI);
+            resultTextBox.Text =
+            "Function Point Analysis Result\n" +
+             "------------------------------\n" +
+            $"Total Unadjusted Function Points (UFP): {totalUFP}\n" +
+            $"Total Degree of Influence (DI): {totalDI}\n" +
+            $"Total Technical Complexity Factor (TCF): {totalTCF}\n";
+        }
+
+        private void calculateFP_button_Click(object sender, EventArgs e)
+        {
+            if (totalUFP == 0 || totalTCF == 0)
+            {
+                resultTextBox.Text =
+                "Function Point Analysis Result\n" +
+                "------------------------------\n" +
+                "ERROR: CANT CALCULATE RESULT.\n" +
+                "TRY CALCULATING UFP & TCF/DI FIRST!";
+                return;
+            }
+
+            totalFP = totalUFP * totalTCF;
+            resultTextBox.Text =
+            "Function Point Analysis Result\n" +
+             "------------------------------\n" +
+            $"Total Unadjusted Function Points (UFP): {totalUFP}\n" +
+            $"Total Degree of Influence (DI): {totalDI}\n" +
+            $"Total Technical Complexity Factor (TCF): {totalTCF}\n" +
+            $"Total Function Points (FP): {totalFP}\n";
         }
     }
 }
