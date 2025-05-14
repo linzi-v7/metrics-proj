@@ -47,7 +47,11 @@ namespace metricsFP
         private int totalDI;
         private int totalUFP;
         private double totalTCF;
-        private double totalFP;
+        private double totalFP = -1;
+        private double totalLOC;
+
+        private String chosenLanguage = "None";
+        private int chosenAVC = 0;
 
         private Complexity DetermineComplexity(string controlName)
         {
@@ -62,6 +66,15 @@ namespace metricsFP
         {
             totalDI = result;
             DI_Label.Text = $"Current DI: {result}";
+        }
+
+        public void UpdateAVC(String chosenLanguage, int chosenAVC)
+        {
+            this.chosenLanguage = chosenLanguage;
+            this.chosenAVC = chosenAVC;
+
+            languageLabel.Text = $"Language: {chosenLanguage}";
+            avcLabel.Text = $"AVC: {chosenAVC}";
         }
 
 
@@ -80,6 +93,17 @@ namespace metricsFP
             intLogicFiles_GroupBox.Tag = Parameter.InternalLogicalFiles;
             extInterfaceFiles_GroupBox.Tag = Parameter.ExternalInterfaceFiles;
 
+
+            resultTextBox.Text = "Welcome to the FP Calculator Assistant!\r\n" +
+            "Follow these steps to complete your Function Point calculation:\r\n\r\n" +
+            "1. Calculate the Unadjusted Function Points (UFP)\r\n" +
+            "2. Determine the Degree of Influence (DI) using our dedicated DI form\r\n" +
+            "3. Compute the Technical Complexity Factor (TCF)\r\n" +
+            "4. You're now ready to calculate the final Function Points (FP)!\r\n" +
+            "5. Choose Language and its corresponding AVC from relevant form.\r\n" +
+            "6. Calculate the total Lines Of Code (LOC) needed!\r\n" +
+            "7. You are done!\r\n" +
+            "To show instructions again while calculating, press on the show instructions button.";
         }
 
         private void calculateUFP_Button_Click(object sender, EventArgs e)
@@ -158,6 +182,61 @@ namespace metricsFP
             $"Total Degree of Influence (DI): {totalDI}\n" +
             $"Total Technical Complexity Factor (TCF): {totalTCF}\n" +
             $"Total Function Points (FP): {totalFP}\n";
+        }
+
+        private void help_Button_Click(object sender, EventArgs e)
+        {
+            resultTextBox.Text = "Welcome to the FP Calculator Assistant!\r\n" +
+                "Follow these steps to complete your Function Point calculation:\r\n\r\n" +
+                "1. Calculate the Unadjusted Function Points (UFP)\r\n" +
+                "2. Determine the Degree of Influence (DI) using our dedicated DI form\r\n" +
+                "3. Compute the Technical Complexity Factor (TCF)\r\n" +
+                "4. You're now ready to calculate the final Function Points (FP)!\r\n" +
+                "5. Choose Language and its corresponding AVC from relevant form.\r\n" +
+                "6. Calculate the total Lines Of Code (LOC) needed!\r\n" +
+                "7. You are done!\r\n" +
+                "To show instructions again while calculating, press on the show instructions button.";
+        }
+
+        private void AVCForm_Button_Click(object sender, EventArgs e)
+        {
+            AVC_Form avcForm = new AVC_Form(this);
+            avcForm.ShowDialog();
+        }
+
+        private void calculateLOC_Button_Click(object sender, EventArgs e)
+        {
+            if(chosenAVC == 0 || chosenLanguage == "None")
+            {
+                resultTextBox.Text =
+                    "Function Point Analysis Result\n" +
+                    "------------------------------\n" +
+                    "ERROR: CANT CALCULATE LOC RESULT.\n" +
+                    "TRY CHOOSING AVC VALUE FROM FORM FIRST!";
+                return;
+            }
+
+            if(totalFP == -1)
+            {
+                resultTextBox.Text =
+                    "Function Point Analysis Result\n" +
+                    "------------------------------\n" +
+                    "ERROR: CANT CALCULATE LOC RESULT.\n" +
+                    "TRY CALCULATING FP FIRST!";
+                return;
+            }
+
+            totalLOC = chosenAVC * totalFP;
+            resultTextBox.Text =
+                "Function Point Analysis Result\n" +
+                "------------------------------\n" +
+                $"Total Unadjusted Function Points (UFP): {totalUFP}\n" +
+                $"Total Degree of Influence (DI): {totalDI}\n" +
+                $"Total Technical Complexity Factor (TCF): {totalTCF}\n" +
+                $"Total Function Points (FP): {totalFP}\n" +
+                $"Chosen Programming Language For LOC: {chosenLanguage}\n" +
+                $"AVC Corresponding to Programming Language: {chosenAVC}\n" +
+                $"Total Lines Of Code (LOC): {totalLOC}\n";
         }
     }
 }

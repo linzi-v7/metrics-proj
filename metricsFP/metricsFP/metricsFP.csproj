@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVC_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVC_Form.Designer.cs">
+      <DependentUpon>AVC_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="DI_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AVC_Form.resx">
+      <DependentUpon>AVC_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DI_Form.resx">
       <DependentUpon>DI_Form.cs</DependentUpon>
     </EmbeddedResource>

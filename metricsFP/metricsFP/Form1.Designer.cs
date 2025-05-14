@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.extInput_Label = new System.Windows.Forms.Label();
             this.extOutput_Label = new System.Windows.Forms.Label();
             this.extInquiry_Label = new System.Windows.Forms.Label();
@@ -76,6 +75,11 @@
             this.openDI_Button = new System.Windows.Forms.Button();
             this.calculateTCF_Button = new System.Windows.Forms.Button();
             this.calculateFP_button = new System.Windows.Forms.Button();
+            this.languageLabel = new System.Windows.Forms.Label();
+            this.avcLabel = new System.Windows.Forms.Label();
+            this.calculateLOC_Button = new System.Windows.Forms.Button();
+            this.AVCForm_Button = new System.Windows.Forms.Button();
+            this.help_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudExtInputSimple)).BeginInit();
             this.countGroupBox.SuspendLayout();
             this.extInterfaceFiles_GroupBox.SuspendLayout();
@@ -164,14 +168,14 @@
             this.resultTextBox.ReadOnly = true;
             this.resultTextBox.Size = new System.Drawing.Size(1036, 258);
             this.resultTextBox.TabIndex = 21;
-            this.resultTextBox.Text = resources.GetString("resultTextBox.Text");
+            this.resultTextBox.Text = "";
             // 
             // calculateUFP_Button
             // 
             this.calculateUFP_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateUFP_Button.Location = new System.Drawing.Point(175, 441);
+            this.calculateUFP_Button.Location = new System.Drawing.Point(60, 440);
             this.calculateUFP_Button.Name = "calculateUFP_Button";
-            this.calculateUFP_Button.Size = new System.Drawing.Size(253, 79);
+            this.calculateUFP_Button.Size = new System.Drawing.Size(229, 79);
             this.calculateUFP_Button.TabIndex = 22;
             this.calculateUFP_Button.Text = "Calculate UFP";
             this.calculateUFP_Button.UseVisualStyleBackColor = true;
@@ -583,7 +587,7 @@
             this.openDI_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openDI_Button.Location = new System.Drawing.Point(976, 91);
             this.openDI_Button.Name = "openDI_Button";
-            this.openDI_Button.Size = new System.Drawing.Size(198, 81);
+            this.openDI_Button.Size = new System.Drawing.Size(255, 81);
             this.openDI_Button.TabIndex = 30;
             this.openDI_Button.Text = "Open DI Calculation Form";
             this.openDI_Button.UseVisualStyleBackColor = true;
@@ -592,9 +596,9 @@
             // calculateTCF_Button
             // 
             this.calculateTCF_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateTCF_Button.Location = new System.Drawing.Point(976, 205);
+            this.calculateTCF_Button.Location = new System.Drawing.Point(976, 194);
             this.calculateTCF_Button.Name = "calculateTCF_Button";
-            this.calculateTCF_Button.Size = new System.Drawing.Size(198, 79);
+            this.calculateTCF_Button.Size = new System.Drawing.Size(255, 79);
             this.calculateTCF_Button.TabIndex = 31;
             this.calculateTCF_Button.Text = "Calculate TCF";
             this.calculateTCF_Button.UseVisualStyleBackColor = true;
@@ -602,19 +606,76 @@
             // 
             // calculateFP_button
             // 
-            this.calculateFP_button.Location = new System.Drawing.Point(559, 441);
+            this.calculateFP_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateFP_button.Location = new System.Drawing.Point(333, 440);
             this.calculateFP_button.Name = "calculateFP_button";
-            this.calculateFP_button.Size = new System.Drawing.Size(376, 79);
+            this.calculateFP_button.Size = new System.Drawing.Size(324, 79);
             this.calculateFP_button.TabIndex = 32;
             this.calculateFP_button.Text = "Calculate FP";
             this.calculateFP_button.UseVisualStyleBackColor = true;
             this.calculateFP_button.Click += new System.EventHandler(this.calculateFP_button_Click);
             // 
+            // languageLabel
+            // 
+            this.languageLabel.AutoSize = true;
+            this.languageLabel.Location = new System.Drawing.Point(973, 288);
+            this.languageLabel.Name = "languageLabel";
+            this.languageLabel.Size = new System.Drawing.Size(97, 16);
+            this.languageLabel.TabIndex = 33;
+            this.languageLabel.Text = "Language: N/A";
+            // 
+            // avcLabel
+            // 
+            this.avcLabel.AutoSize = true;
+            this.avcLabel.Location = new System.Drawing.Point(973, 316);
+            this.avcLabel.Name = "avcLabel";
+            this.avcLabel.Size = new System.Drawing.Size(63, 16);
+            this.avcLabel.TabIndex = 34;
+            this.avcLabel.Text = "AVC: N/A";
+            // 
+            // calculateLOC_Button
+            // 
+            this.calculateLOC_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateLOC_Button.Location = new System.Drawing.Point(711, 440);
+            this.calculateLOC_Button.Name = "calculateLOC_Button";
+            this.calculateLOC_Button.Size = new System.Drawing.Size(241, 79);
+            this.calculateLOC_Button.TabIndex = 35;
+            this.calculateLOC_Button.Text = "Calculate LOC";
+            this.calculateLOC_Button.UseVisualStyleBackColor = true;
+            this.calculateLOC_Button.Click += new System.EventHandler(this.calculateLOC_Button_Click);
+            // 
+            // AVCForm_Button
+            // 
+            this.AVCForm_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AVCForm_Button.Location = new System.Drawing.Point(976, 345);
+            this.AVCForm_Button.Name = "AVCForm_Button";
+            this.AVCForm_Button.Size = new System.Drawing.Size(255, 74);
+            this.AVCForm_Button.TabIndex = 36;
+            this.AVCForm_Button.Text = "Choose AVC Form";
+            this.AVCForm_Button.UseVisualStyleBackColor = true;
+            this.AVCForm_Button.Click += new System.EventHandler(this.AVCForm_Button_Click);
+            // 
+            // help_Button
+            // 
+            this.help_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.help_Button.Location = new System.Drawing.Point(997, 440);
+            this.help_Button.Name = "help_Button";
+            this.help_Button.Size = new System.Drawing.Size(234, 79);
+            this.help_Button.TabIndex = 37;
+            this.help_Button.Text = "Show Instructions (Help)";
+            this.help_Button.UseVisualStyleBackColor = true;
+            this.help_Button.Click += new System.EventHandler(this.help_Button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 823);
+            this.ClientSize = new System.Drawing.Size(1260, 823);
+            this.Controls.Add(this.help_Button);
+            this.Controls.Add(this.AVCForm_Button);
+            this.Controls.Add(this.calculateLOC_Button);
+            this.Controls.Add(this.avcLabel);
+            this.Controls.Add(this.languageLabel);
             this.Controls.Add(this.calculateFP_button);
             this.Controls.Add(this.calculateTCF_Button);
             this.Controls.Add(this.openDI_Button);
@@ -710,6 +771,11 @@
         private System.Windows.Forms.Button openDI_Button;
         private System.Windows.Forms.Button calculateTCF_Button;
         private System.Windows.Forms.Button calculateFP_button;
+        private System.Windows.Forms.Label languageLabel;
+        private System.Windows.Forms.Label avcLabel;
+        private System.Windows.Forms.Button calculateLOC_Button;
+        private System.Windows.Forms.Button AVCForm_Button;
+        private System.Windows.Forms.Button help_Button;
     }
 }
 
