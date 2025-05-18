@@ -580,7 +580,7 @@
             this.DI_Label.Name = "DI_Label";
             this.DI_Label.Size = new System.Drawing.Size(305, 44);
             this.DI_Label.TabIndex = 29;
-            this.DI_Label.Text = "Current DI: 0";
+            this.DI_Label.Text = "Current DI: 1";
             // 
             // openDI_Button
             // 

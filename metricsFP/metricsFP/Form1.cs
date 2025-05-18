@@ -44,7 +44,7 @@ namespace metricsFP
             { 5,  7, 10 },
         };
 
-        private int totalDI;
+        private int totalDI = 1;
         private int totalUFP;
         private double totalTCF;
         private double totalFP = -1;
@@ -64,6 +64,10 @@ namespace metricsFP
 
         public void UpdateDILabel(int result)
         {
+            if (result == 0)
+            {
+                result = 1;
+            }
             totalDI = result;
             DI_Label.Text = $"Current DI: {result}";
         }
